@@ -1,0 +1,6 @@
+for i in range(0xe000, 0xfffff):
+            j = chr(i)
+            print(j)
+            f = open(logging, "a")
+            f.write(j)
+            f.close()
