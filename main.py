@@ -189,14 +189,13 @@ def big():
 		r_u_shure = str(input(promt))
 		x = 0
 		def unicode():
-			logging_file = file, '.txt'
-			logging = str(logging_file)
+			logging_file = str(file) + '.txt'
 			global x
 			while (x != y):
 				with open('example.txt', 'r+')as r:
 					global s
 					s = r.read()
-				with open(logging, 'a')as q:
+				with open(logging_file, 'a')as q:
 					q.write(s)
 				x = x + 1
 				print(x, 'repations done')
