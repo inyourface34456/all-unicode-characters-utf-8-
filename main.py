@@ -2,97 +2,206 @@ import random
 global x
 counter = 0
 x = 0
-with open('output.txt', 'w')as k:
-				k.write('')
-def toHex(dec):
-    digits = "0123456789ABCDEF"
-    x = (dec % 16)
-    rest = dec // 16
-    if (rest == 0):
-        return digits[x]
-    return toHex(rest) + digits[x]
+with open('output.txt', 'w') as k:
+    k.write('')
+
+with open('pass.txt', 'w') as l:
+    l.write('')
+
+
+def random_chrs(langth):
+    with open('example.txt', 'r') as y:
+        z = y.read()
+    for i in langth:
+        c = random.randint(0, 68100)
+        print(z[c])
+        with open('output.txt', 'a') as k:
+            k.write(z[c])
 
 def random2():
-	input2 = int(input('how long will the string be? '))
-	def random_chrs(langth):
-		with open('example.txt', 'r') as y:
-			z = y.read()
-		# a = hex(0x0)
-		# b = counter
-		for i in langth:
-			c = random.randint(0, 68177)
-			print(z[c])
-			with open('output.txt', 'a')as k:
-				k.write(z[c])
-	random_chrs(range(0, input2))
+    x = str(
+        input(
+            'what do you want to do (type the num): \n 1. random password (letters caps and lower case and sesel chrs)\n 2. random pass (letters (caps and lower) and nums \n 3. random pass (letters (just caps) nums \n 4. random pass (just lower) and nums\n 5. make pass (just nums) \n 6. make pass just letters (caps)\n 7. make pass just letters (lower) \n 8. random string with all chrs included \n >>>'
+        ))
+
+    def make_passabcABC123s():
+        z = [
+            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+            'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '@', '#',
+            '$', '%', '^', '&', '*', '(', ')'
+        ]
+        langth = int(input('how log will the string be'))
+        for i in range(0, langth):
+            d = len(z)
+            c = random.randint(0, d - 1)
+            print(z[c])
+            with open('pass.txt', 'a') as k:
+                k.write(z[c])
+
+    def make_passabcABC123():
+        z = [
+            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+            'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'
+        ]
+        langth = int(input('how log will the string be'))
+        for i in range(0, langth):
+            d = len(z)
+            c = random.randint(0, d - 1)
+            print(z[c])
+            with open('pass.txt', 'a') as k:
+                k.write(z[c])
+
+    def make_passABC123():
+        z = [
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+            'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'
+        ]
+        langth = int(input('how log will the string be'))
+        for i in range(0, langth):
+            d = len(z)
+            c = random.randint(0, d - 1)
+            print(z[c])
+            with open('pass.txt', 'a') as k:
+                k.write(z[c])
+
+    def make_passabc123():
+        z = [
+            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'
+        ]
+        langth = int(input('how log will the string be'))
+        for i in range(0, langth):
+            d = len(z)
+            c = random.randint(0, d - 1)
+            print(z[c])
+            with open('pass.txt', 'a') as k:
+                k.write(z[c])
+
+    def make_pass123():
+        z = z = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+        langth = int(input('how log will the string be'))
+        for i in range(0, langth):
+            d = len(z)
+            c = random.randint(0, d - 1)
+            print(z[c])
+            with open('pass.txt', 'a') as k:
+                k.write(z[c])
+
+    def make_passABC():
+        z = [
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+            'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+        ]
+        langth = int(input('how log will the string be'))
+        for i in range(0, langth):
+            d = len(z)
+            c = random.randint(0, d - 1)
+            print(z[c])
+            with open('pass.txt', 'a') as k:
+                k.write(z[c])
+
+    def make_passabc():
+        z = [
+            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+        ]
+        langth = int(input('how log will the string be'))
+        for i in range(0, langth):
+            d = len(z)
+            c = random.randint(0, d - 1)
+            print(z[c])
+            with open('pass.txt', 'a') as k:
+                k.write(z[c])
+
+    def random_chrs():
+        langth = int(input('How long'))
+        with open('example.txt', 'r') as y:
+            z = y.read()
+        for i in range(0, langth):
+            c = random.randint(0, 68176)
+            print(z[c])
+            with open('output.txt', 'a') as k:
+                k.write(z[c])
+
+    x = str(x)
+    if (x == '1'):
+        make_passabcABC123s()
+    if (x == '2'):
+        make_passabcABC123()
+    if (x == '3'):
+        make_passABC123()
+    if (x == '4'):
+        make_passabc123()
+    if (x == '5'):
+        make_pass123()
+    if (x == '6'):
+        make_passABC()
+    if (x == '7'):
+        make_passabc()
+    if (x == '8'):
+        random_chrs()
 
 
 def small():
-    y = int(
-        input(
-            'enter the number of reps that this should do \n (each repatation is about 3.65 MB) '
-        ))
-    encoding = str(input('what encodigh do you want to use? '))
-    file = str(input('what file do you want to use for logging? '))
-    KB = y * 3.65
-    MB = str(KB)
-    promt = 'are you shure that you want to print' + MB + 'MB of charaters (y or n) '
-    r_u_shure = str(input(promt))
-    x = 0
+		y = int(input('enter the number of reps that this should do \n (each repatation is about 3.65 MB) '))
+		encoding = str(input('what encodigh do you want to use? '))
+		file = str(input('what file do you want to use for logging? '))
+		KB = y * 3.65
+		MB = str(KB)
+		promt = 'are you shure that you want to print' + MB + 'MB of charaters (y or n) '
+		r_u_shure = str(input(promt))
+		x = 0
 
-    def unicode():
-        global x
-        while (x != y):
-            for i in range(0x0, 0xd800):
-                print(chr(i))
-                f = open(logging, "a", -1, encoding)
-                f.write(chr(i))
-                f.close()
-            x = x + 1
-            print(x, 'repations done')
+		def unicode():
+			global x
+			while (x != y):
+				logging_file = str(file) + '.txt'
+				while (x != y):
+					with open('small_example.txt', 'r+', -1, encoding)as r:
+						global sw
+						sw = r.read()					
+					with open(logging_file, 'a')as q:
+						q.write(sw)
+					x = x + 1
+					print(x, 'repations done')
 
-    file = str(file)
-    logging_file = file + '.txt'
-    logging = str(logging_file)
-    if (r_u_shure == 'y'):
-        unicode()
+		if (r_u_shure == 'y'):
+			unicode()
+		
 
 
 def big():
-    y = int(
-        input(
-            'enter the number of reps that this should do \n (each repatation is about 3.65 MB) '
-        ))
-    global encoding
-    encoding = str(input('what encodigh do you want to use? '))
-    file = str(input('what file do you want to use for logging? '))
-    KB = y * 3.65
-    MB = str(KB)
-    promt = 'are you shure that you want to print' + MB + 'MB of charaters (y or n) '
-    r_u_shure = str(input(promt))
-    x = 0
-
-    def unicode():
-        global x
-        while (x != y):
-            for i in range(0x0, 0xd800):
-                print(chr(i))
-                f = open(logging, "a", -1, encoding)
-                f.write(chr(i))
-                f.close()
-            for i in range(0xe000, 0xfffff):
-                j = chr(i)
-                print(j)
-                f = open(logging, "a")
-                f.write(j)
-                f.close()
-            x = x + 1
-            print(x, 'repations done')
-
-    logging_file = file, '.txt'
-    logging = str(logging_file)
-    if (r_u_shure == 'y'):
-        unicode()
+		y = int(input('enter the number of reps that this should do \n (each repatation is about 3.65 MB) '))
+		global encoding
+		encoding = str(input('what encodigh do you want to use? '))
+		file = str(input('what file do you want to use for logging? '))
+		KB = y * 3.65
+		MB = str(KB)
+		promt = 'are you shure that you want to print' + MB + 'MB of charaters (y or n) '
+		r_u_shure = str(input(promt))
+		x = 0
+		def unicode():
+			logging_file = file, '.txt'
+			logging = str(logging_file)
+			global x
+			while (x != y):
+				with open('example.txt', 'r+')as r:
+					global s
+					s = r.read()
+				with open(logging, 'a')as q:
+					q.write(s)
+				x = x + 1
+				print(x, 'repations done')
+		if (r_u_shure == 'y'):
+			unicode()
 
 
 big_small = str(input('big  or small or random srring of any langth? '))
@@ -102,4 +211,4 @@ if (big_small == 'small'):
     small()
 
 if (big_small == 'random string'):
-	random2()
+    random2()
